@@ -1,5 +1,5 @@
 import TeamSection from '../components/TeamSection'
-import Link from 'next/link'
+
 
 export default function Home() {
   return (
