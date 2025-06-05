@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import {
   FaKey,
   FaFingerprint,
@@ -10,15 +11,13 @@ import {
   FaGithub,
 } from 'react-icons/fa'
 
-import React from 'react'
-
 interface Member {
   name: string
   id: string
   role: string
   github: string
   part: string
-  icon: JSX.Element
+  icon: React.ReactNode
 }
 
 const members: Member[] = [
@@ -73,29 +72,34 @@ const members: Member[] = [
 ]
 
 export default function TeamSection() {
-  const grouped: { [key: string]: Member[] } = members.reduce((acc, cur) => {
+  const grouped = members.reduce<Record<string, Member[]>>((acc, cur) => {
     acc[cur.part] = acc[cur.part] || []
     acc[cur.part].push(cur)
     return acc
-  }, {} as { [key: string]: Member[] })
+  }, {})
 
   return (
     <div className="w-full max-w-6xl mx-auto py-16 px-6">
       <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-blue-700">전자서명계약서 페이지</h1>
         <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-          "보안성과 사용자 편의성을 모두 만족시키는 차세대 전자계약서 페이지 개발"을 목표로 협업하고 있습니다.
+          &lsquo;보안성과 사용자 편의성을 모두 만족시키는 차세대 전자계약서 페이지 개발&rsquo;을 목표로 협업하고 있습니다.
         </p>
       </div>
 
-      {Object.keys(grouped).map((part, i) => (
-        <div key={i} className="mb-16">
+      {Object.keys(grouped).map((part) => (
+        <div key={part} className="mb-16">
           <h2 className="text-xl font-semibold text-blue-600 mb-6 border-b border-blue-200 pb-2">
             {part}
           </h2>
           <ul className="space-y-12">
             {grouped[part].map((member, idx) => (
-              <li key={idx} className={`flex items-start ${idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'} gap-6`}>
+              <li
+                key={member.id}
+                className={`flex items-start ${
+                  idx % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
+                } gap-6`}
+              >
                 <div className="flex flex-col items-center relative z-20">
                   <div className="bg-white border-4 border-blue-500 rounded-full p-3 shadow-lg">
                     {member.icon}
