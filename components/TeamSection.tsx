@@ -24,23 +24,23 @@ const members: Member[] = [
   {
     name: '개발자 정은수',
     id: '92313659',
-    role: 'JWT 세션 관리 및 MongoDB 설계',
+    role: '로그인/회원가입 API, JWT 기반 세션 관리, MONGODB 사용자 저장 구조 설계',
     github: 'https://github.com/jungeunsu',
     icon: <FaKey size={20} />,
     part: '인증 & 사용자 관리',
   },
   {
-    name: '개발자 B',
-    id: '20231235',
-    role: 'Google OTP 연동 및 로그인 UI 구현',
-    github: 'https://github.com/devB',
+    name: '개발자 김다예',
+    id: '92313295',
+    role: 'GOOGLE OTP 연동, 로그인 페이지 UI, 인증 흐름 테스트 시나리오 작성',
+    github: 'https://github.com/KIMDAYE04/part-B',
     icon: <FaFingerprint size={20} />,
     part: '인증 & 사용자 관리',
   },
   {
-    name: '개발자 C',
+    name: '개발자 홍정현',
     id: '20231236',
-    role: 'PDF 업로드 및 SHA-256 해시 처리',
+    role: 'pdf 업롣 및 처리, sha-256 해시 생성 및 무결성 검증 로직, 프로젝트 코드 통합 및 추가 기능 설계',
     github: 'https://github.com/devC',
     icon: <FaServer size={20} />,
     part: '계약서 처리 & 보안',
@@ -56,7 +56,7 @@ const members: Member[] = [
   {
     name: '개발자 안지영',
     id: '92313415',
-    role: 'QR 인증 UI, 계약서 열람 인터페이스',
+    role: '계약서 작성/열람 화면, QR 인증 UI+QR 리더기 연동, 사용자 인증 흐름 시각화',
     github: 'https://github.com/jiyoung5566',
     icon: <FaQrcode size={20} />,
     part: '프론트엔드 & UI',
@@ -64,7 +64,7 @@ const members: Member[] = [
   {
     name: '개발자 신지영',
     id: '92313403',
-    role: '손글씨 서명 UI 및 서명 상태 처리',
+    role: '손글씨 서명 UI, 서명된 해시값 처리 및 전송, 전자서명 상태 표시 화면, 팀원 소개 페이지(본 페이지) 제작',
     github: 'https://github.com/shinjiyoung04/sign',
     icon: <FaFileSignature size={20} />,
     part: '프론트엔드 & UI',
@@ -81,7 +81,7 @@ export default function TeamSection() {
   return (
     <div className="w-full max-w-6xl mx-auto py-16 px-6">
       <div className="text-center mb-12">
-        <h1 className="text-3xl font-bold text-blue-700">전자서명계약서 페이지</h1>
+        <h1 className="text-3xl font-bold text-blue-700">전자서명계약서 페이지 제작 프로젝트</h1>
         <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
           &lsquo;보안성과 사용자 편의성을 모두 만족시키는 차세대 전자계약서 페이지 개발&rsquo;을 목표로 협업하고 있습니다.
         </p>
@@ -106,7 +106,7 @@ export default function TeamSection() {
                   </div>
                   <div className="h-full w-px bg-gray-300" />
                 </div>
-                <div className="bg-white shadow-lg rounded-xl px-6 py-5 w-full max-w-md border border-gray-200 hover:shadow-xl transition-all">
+                <div className="bg-white shadow-lg rounded-xl px-8 py-6 w-full max-w-2xl border border-gray-200 hover:shadow-xl transition-all">
                   <h3 className="text-lg font-bold text-gray-800">{member.name}</h3>
                   <p className="text-sm text-gray-500">{member.id}</p>
                   <p className="text-sm text-gray-700 mt-2">{member.role}</p>
