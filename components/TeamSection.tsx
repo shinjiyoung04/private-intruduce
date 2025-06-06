@@ -40,7 +40,7 @@ const members: Member[] = [
   {
     name: '92313726',
     realName: '홍정현',
-    role: 'pdf 업롣 및 처리, sha-256 해시 생성 및 무결성 검증 로직, 프로젝트 코드 통합 및 추가 기능 설계',
+    role: 'pdf 업로드 및 처리, sha-256 해시 생성 및 무결성 검증 로직, 프로젝트 코드 통합 및 추가 기능 설계',
     github: 'https://github.com/anon418/forge-crypto-demo',
     icon: <FaServer size={20} />,
     part: '계약서 처리 & 보안',
